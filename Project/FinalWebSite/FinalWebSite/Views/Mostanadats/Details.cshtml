@@ -1,0 +1,34 @@
+﻿@model FinalWebSite.Models.Mostanadat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mostanadat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mostanad_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mostanad_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Msale7.Msl7a_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Msale7.Msl7a_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Mostanad_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

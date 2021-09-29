@@ -1,0 +1,88 @@
+﻿@model FinalWebSite.Models.Request
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.No_of_copies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No_of_copies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Printed_or_not)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Printed_or_not)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.toPrint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.toPrint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Msg_Sent_Or_Not)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Msg_Sent_Or_Not)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Citizen.Citizen_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Citizen.Citizen_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mostanadat.Mostanad_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mostanadat.Mostanad_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Msale7.Msl7a_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Msale7.Msl7a_Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

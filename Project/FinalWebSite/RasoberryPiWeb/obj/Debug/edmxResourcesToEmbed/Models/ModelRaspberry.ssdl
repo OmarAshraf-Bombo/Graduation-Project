@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebsiteDatabaseProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityType Name="Citizens">
+    <Key>
+      <PropertyRef Name="National_ID" />
+    </Key>
+    <Property Name="National_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Citizen_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="Relegion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mother_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="M7l_elmelad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mostanadat">
+    <Key>
+      <PropertyRef Name="Mostanad_ID" />
+    </Key>
+    <Property Name="Mostanad_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mostanad_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Msl7a_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Msale7">
+    <Key>
+      <PropertyRef Name="Msl7a_ID" />
+    </Key>
+    <Property Name="Msl7a_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Msl7a_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Requests">
+    <Key>
+      <PropertyRef Name="Request_ID" />
+    </Key>
+    <Property Name="Request_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Msl7a_ID" Type="int" Nullable="false" />
+    <Property Name="Mostanad_ID" Type="int" Nullable="false" />
+    <Property Name="No_of_copies" Type="int" Nullable="false" />
+    <Property Name="Citizen_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Printed_or_not" Type="bit" Nullable="false" />
+    <Property Name="toPrint" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Mostanadat_Msale7">
+    <End Role="Msale7" Type="Self.Msale7" Multiplicity="1" />
+    <End Role="Mostanadat" Type="Self.Mostanadat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Msale7">
+        <PropertyRef Name="Msl7a_ID" />
+      </Principal>
+      <Dependent Role="Mostanadat">
+        <PropertyRef Name="Msl7a_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requests_Citizens">
+    <End Role="Citizens" Type="Self.Citizens" Multiplicity="1" />
+    <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Citizens">
+        <PropertyRef Name="National_ID" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="Citizen_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requests_Mostanadat">
+    <End Role="Mostanadat" Type="Self.Mostanadat" Multiplicity="1" />
+    <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mostanadat">
+        <PropertyRef Name="Mostanad_ID" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="Mostanad_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requests_Msale7">
+    <End Role="Msale7" Type="Self.Msale7" Multiplicity="1" />
+    <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Msale7">
+        <PropertyRef Name="Msl7a_ID" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="Msl7a_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebsiteDatabaseProjectModelStoreContainer">
+    <EntitySet Name="Citizens" EntityType="Self.Citizens" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Mostanadat" EntityType="Self.Mostanadat" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Msale7" EntityType="Self.Msale7" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Requests" EntityType="Self.Requests" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <AssociationSet Name="FK_Mostanadat_Msale7" Association="Self.FK_Mostanadat_Msale7">
+      <End Role="Msale7" EntitySet="Msale7" />
+      <End Role="Mostanadat" EntitySet="Mostanadat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requests_Citizens" Association="Self.FK_Requests_Citizens">
+      <End Role="Citizens" EntitySet="Citizens" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requests_Mostanadat" Association="Self.FK_Requests_Mostanadat">
+      <End Role="Mostanadat" EntitySet="Mostanadat" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requests_Msale7" Association="Self.FK_Requests_Msale7">
+      <End Role="Msale7" EntitySet="Msale7" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

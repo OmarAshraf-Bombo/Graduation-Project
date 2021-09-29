@@ -1,0 +1,14 @@
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\bin\Debug\SMS.exe.config
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\bin\Debug\SMS.exe
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\bin\Debug\SMS.pdb
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\bin\Debug\RS232.dll
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\bin\Debug\GSMCommShared.dll
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.csprojResolveAssemblyReference.cache
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.Delete.resources
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.frmConnection.resources
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.Receive.resources
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.Send.resources
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.Form1.resources
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.csproj.GenerateResource.Cache
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.exe
+C:\Users\Omar Ashraf\Desktop\SMS\sms\SMS\SMS\obj\Debug\SMS.pdb

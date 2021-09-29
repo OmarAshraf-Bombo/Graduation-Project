@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebsiteDatabaseProjectModelStoreContainer" CdmEntityContainer="WebsiteDatabaseProjectEntities">
+    <EntitySetMapping Name="Citizens">
+      <EntityTypeMapping TypeName="WebsiteDatabaseProjectModel.Citizen">
+        <MappingFragment StoreEntitySet="Citizens">
+          <ScalarProperty Name="National_ID" ColumnName="National_ID" />
+          <ScalarProperty Name="Citizen_Name" ColumnName="Citizen_Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Relegion" ColumnName="Relegion" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="M7l_elmelad" ColumnName="M7l_elmelad" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mostanadats">
+      <EntityTypeMapping TypeName="WebsiteDatabaseProjectModel.Mostanadat">
+        <MappingFragment StoreEntitySet="Mostanadat">
+          <ScalarProperty Name="Mostanad_ID" ColumnName="Mostanad_ID" />
+          <ScalarProperty Name="Mostanad_Name" ColumnName="Mostanad_Name" />
+          <ScalarProperty Name="Msl7a_ID" ColumnName="Msl7a_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Msale7">
+      <EntityTypeMapping TypeName="WebsiteDatabaseProjectModel.Msale7">
+        <MappingFragment StoreEntitySet="Msale7">
+          <ScalarProperty Name="Msl7a_ID" ColumnName="Msl7a_ID" />
+          <ScalarProperty Name="Msl7a_Name" ColumnName="Msl7a_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="WebsiteDatabaseProjectModel.Request">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="Request_ID" ColumnName="Request_ID" />
+          <ScalarProperty Name="Msl7a_ID" ColumnName="Msl7a_ID" />
+          <ScalarProperty Name="Mostanad_ID" ColumnName="Mostanad_ID" />
+          <ScalarProperty Name="No_of_copies" ColumnName="No_of_copies" />
+          <ScalarProperty Name="Citizen_ID" ColumnName="Citizen_ID" />
+          <ScalarProperty Name="Printed_or_not" ColumnName="Printed_or_not" />
+          <ScalarProperty Name="toPrint" ColumnName="toPrint" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Msg_Sent_Or_Not" ColumnName="Msg_Sent_Or_Not" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

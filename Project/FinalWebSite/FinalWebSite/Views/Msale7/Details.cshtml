@@ -1,0 +1,26 @@
+﻿@model FinalWebSite.Models.Msale7
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Msale7</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Msl7a_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Msl7a_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Msl7a_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

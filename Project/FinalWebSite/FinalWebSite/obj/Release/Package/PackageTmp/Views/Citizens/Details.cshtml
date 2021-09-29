@@ -1,0 +1,74 @@
+﻿@model FinalWebSite.Models.Citizen
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Citizen</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Citizen_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Citizen_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relegion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relegion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mother_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mother_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M7l_elmelad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M7l_elmelad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.National_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

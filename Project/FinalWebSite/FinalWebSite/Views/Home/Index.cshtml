@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@*@model IEnumerable<FinalWebSite.Models.Citizen>*@
+@model IEnumerable<FinalWebSite.Models.Msale7>
+<div class="jumbotron" style="margin-top:-17px;margin-bottom:50px;margin-left:-105px;margin-right:-104px">
+    <h1 style="font-size:90px;color:white;margin-top:-8px;font-family:Aldhabi" class="text-center"><b>فــى خدمتــــك</b></h1>
+    <h1 style="margin-left:430px;font-size:25px;margin-top:-20px;color:#9feb0d">وفر وقتــك و أنجــز ورقـك</h1>
+    <p style="color:white;font-family:'Kristen ITC';margin-top:25px" dir="rtl">يقدم موقعنا الألكتروني كافة الخدمات الخاصة بأستخراج الاوراق الرسمية لتسهيل الأجراءات وتوفير الوقت والجهد للمواطنين وذلك للمصالح الاتيه:</p>
+    <ul style="color:#9feb0d;font-family:'Kristen ITC'" dir="rtl">
+        @{
+            foreach (FinalWebSite.Models.Msale7 ms in Model)
+            {
+                <li>
+                    @ms.Msl7a_Name
+                </li>
+            }
+        }
+    </ul>
+    <p style="color:white;font-family:'Kristen ITC'" dir="rtl">فقط عليك استكمال الخطوات التالية لاستخراج المستندات المطلوبة  ثم التوجه لاقرب ماكينه لأستيلامها</p>
+</div>
+<div style="margin:20px 20px 50px 25px">
+    <label id="Errormsg" type="text" style="color:red;margin-left:885px;margin-bottom:15px">@{Html.RenderAction("erromsg", "Home");} </label>
+    @using (Html.BeginForm("Create", "Home"))
+    {
+        <p dir="rtl" style="color:black"><b>الرقم القومى</b>.</p>
+            <input dir="ltr" name="name" type="text" style="margin:0px 100px 25px 900px" />
+            <p dir="rtl" style="color:black"><b>كلمة السـر</b>.</p>
+            <input dir="ltr" style="margin:0px 100px 25px 900px" name="password" type="password" />
+            <input style="margin:15px 100px 20px 980px" type="submit" class="btn btn-primary" value="دخول" />
+    }
+    <a onclick="window.location='Contact'" style='position:fixed; margin-left:-130px ;top:18%; z-index: 4;'><img border="0" height="100" src="~/Assets/contactus.png" width="30" /></a>
+    <label></label>
+    <a onclick="window.location='About'" style='position:fixed; margin-left:-130px ;top:35%; z-index: 4;'><img border="0" height="50" src="~/Assets/aboutus.png" width="30" /></a>
+
+
+
+    <div class="navbar" style="background-color:white;margin-left:-70px;margin-right:-90px;margin-bottom:-53px;margin-top:50px">
+
+        @*Elgoz2 da Bta3 el Function bta3t el Facebook w el Twitter*@
+        <a style="margin-left:100px" href="https://twitter.com/Breed20The" class="twitter-follow-button" data-show-count="true" data-show-faces="true" data-show-screen-name="true">Follow</a>
+        <script>
+                window.twttr = (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      t = window.twttr || {};
+                    if (d.getElementById(id)) return t;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    t._e = [];
+                    t.ready = function (f) {
+                        t._e.push(f);
+                    };
+                    return t;
+                }(document, "script", "twitter-wjs"));</script>
+        <div class="fb-follow" data-href="https://www.facebook.com/zuck" data-width="500px" data-layout="standard" data-show-faces="true"></div>
+        <script>
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+        @*<div class="feedbackBlock">
+                <h3><a href="#">Feedback</a></h3>
+            </div>*@
+        @*El goz2 da 3shan lma yrg3 back button myrg3sh*@
+        @*<script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+            window.history.forward()
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+            window.onunload = function () { void (0) }
+                    </script>*@
+    </div>
+</div>

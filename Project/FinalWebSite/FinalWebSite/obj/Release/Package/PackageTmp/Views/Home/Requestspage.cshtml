@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Requestspage";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div style="margin:50px 20px 50px 25px">
+        <p dir="rtl"><b>الرقم القومي</b></p>
+
+        <label dir="rtl" id="rqmqwmy" type="text" style="margin:0pc 200px 25px 750px;color:dimgrey;width:300px">@{Html.RenderAction("RQ", "Home");}</label>
+
+        <p dir="rtl"><b>الأسم</b></p>
+
+        <label dir="rtl" id="esm" type="text" style="margin:0pc 200px 25px 750px;color:dimgrey;width:300px">@{Html.RenderAction("Name", "Home");} </label>
+
+        <p dir="rtl"><b>تاريخ الميلاد</b></p>
+
+        <label dir="rtl" id="tare5" type="date" style="margin:0pc 200px 25px 750px;color:dimgrey;width:300px">@{Html.RenderAction("TM", "Home");}</label>
+
+        <p dir="rtl"><b>محل الميلاد</b></p>
+
+        <label dir="rtl" id="m7l" type="text" style="margin:0pc 200px 25px 750px;color:dimgrey;width:300px">@{Html.RenderAction("MM", "Home");}</label>
+
+        <p dir="rtl"><b>أسم الأم</b></p>
+
+        <label dir="rtl" id="esmelom" type="text" style="margin:0pc 200px 25px 750px;color:dimgrey;width:300px">@{Html.RenderAction("MN", "Home");}</label>
+
+        <p dir="rtl"><b>الديانة</b></p>
+
+        <label dir="rtl" id="dyana" type="text" style="margin:0pc 200px 25px 750px;color:dimgrey;width:300px">@{Html.RenderAction("RE", "Home");}</label>
+
+        <p dir="rtl"><b>عدد النسخ</b></p>
+
+        
+@using (Html.BeginForm("save_requests", "Home"))
+{
+    <input dir="ltr" id="copies" type="number" name="numberofcopies" style="margin:0px 100px 25px 1000px;width:50px;color:dimgrey" />
+<label></label>
+
+        <button   id="ta2ked" name="ta2ked" style="margin:15px 100px 50px 980px" type="submit" class="btn btn-primary">تاكيد</button>
+
+
+
+}
+        </div>
+        <div class="rating">
+            <hr size="35" width="100%" style="color:black" />
+
+            <div id="anotheroperation">
+
+                <p dir="rtl" style="margin:10px 100px 25px 600px;color:darkred;font-size:19px;color:darkblue;width:500px"><b>هل تريد القيام بأي عمليه اخري ؟</b></p>
+                <form style="margin:0px 100px 25px 1000px" dir="rtl">
+                    <p>
+                        <input type="button"  style="grid-row-sizing:auto" class="btn btn-info" onclick="window.location='Msal7page'" value="نعم" />
+                        <label></label>
+                        <label></label>
+                        <input type="button" class="btn btn-info" onclick="window.location='Index'" value="لا" />
+                        <label></label>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    
+
+</body>
+</html>

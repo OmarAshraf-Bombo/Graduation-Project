@@ -1,0 +1,58 @@
+﻿@model FinalWebSite.Models.Request
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.No_of_copies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No_of_copies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Printed_or_not)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Printed_or_not)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Citizen.Citizen_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Citizen.Citizen_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mostanadat.Mostanad_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mostanadat.Mostanad_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Msale7.Msl7a_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Msale7.Msl7a_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Request_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
